@@ -1,5 +1,5 @@
-# 连接问题 
-## 01
+# GitHub 连接问题 
+## 问题01
 ### Q
     已开启代理但是git bash中还是显示
     Failed to connect to github.com port 443 after 21102 ms: Could not connect to server
