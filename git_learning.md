@@ -4,7 +4,7 @@
 
 ### git init 
 
-​	Git使用git init命令来初始化一个Git仓库，执行完git init命令后，会生成一个.git目录，该目录包含了资源数据，且只会在仓库的根目录生成。
+Git使用git init命令来初始化一个Git仓库，执行完git init命令后，会生成一个.git目录，该目录包含了资源数据，且只会在仓库的根目录生成。
 
 ```bash
 git init
@@ -12,14 +12,14 @@ git init
 
 ### git clone 
 
-​	使用git clone命令可以从Git仓库拷贝项目，类似于SVN中的 svn checkout，命令格式为：
+使用git clone命令可以从Git仓库拷贝项目，类似于SVN中的 svn checkout，命令格式为：
 
 ```bash
 git clone <url> [directory]
 git clone git://github.com/schacon/grit.git newgit
 ```
 
-​	**使用git拉代码时可以使用 -b 指定分支**	
+**使用git拉代码时可以使用 -b 指定分支**	
 
 ```bash
 指定拉 master 分支代码
@@ -49,7 +49,7 @@ git config --global -l
 
 ### git add
 
-​	git add 命令可将文件添加到缓存，如新项目中，添加所有文件很普遍，可以使用如下命令：
+git add 命令可将文件添加到缓存，如新项目中，添加所有文件很普遍，可以使用如下命令：
 
 ```bash
 git add . //添加所有文件
@@ -58,7 +58,7 @@ git add *.txt //添加文本文件
 
 ### git status
 
-​	使用 git status 命令来查看相关文件的状态
+使用 git status 命令来查看相关文件的状态
 
 ```bash
 git status
@@ -79,7 +79,7 @@ M - 被修改，A - 被添加，D - 被删除，R - 重命名，?? - 未被跟�
 
 ### git commit
 
-​	git commit 将缓存区内容添加到仓库中，可以在后面加-m选项，以在命令行中提供提交注释，格式如下：
+git commit 将缓存区内容添加到仓库中，可以在后面加-m选项，以在命令行中提供提交注释，格式如下：
 
 ```bash
 git commit -m "第一次版本提交"
@@ -101,7 +101,7 @@ git rm –r *
 
 ### git mv
 
-​	git mv 命令用于移动或重命名一个文件、目录、软连接，如要将一个test.txt文件重命名为newtest.txt，则可以使用如下命令：
+git mv 命令用于移动或重命名一个文件、目录、软连接，如要将一个test.txt文件重命名为newtest.txt，则可以使用如下命令：
 
 ```bash
 git mv test.txt newtest.txt
