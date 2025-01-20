@@ -19,6 +19,21 @@ git clone <url> [directory]
 git clone git://github.com/schacon/grit.git newgit
 ```
 
+​	**使用git拉代码时可以使用 -b 指定分支**	
+
+```bash
+指定拉 master 分支代码
+
+git clone -b master http://gitslab.yiqing.com/declare/about.git
+
+指定拉 develop 分支代码
+
+git clone -b develop http://gitslab.yiqing.com/declare/about.git
+
+```
+
+
+
 ## 基本指令
 
 ### git config
