@@ -1,4 +1,4 @@
-# Topic话题
+# 话题通信
 
 - 持续通讯
 - 数据中的数据叫做Message
@@ -110,15 +110,13 @@ if __name__ == "__main__":
 
     sub = rospy.Subscriber("Topic1",String,chao_callback,queue_size=10)
 
-    rospy.spin()
+    rospy.spin(
 ```
 
+# 服务通信
 
-
-# Message消息
-
-- std_msgs
-  - 包括了基本的消息类型
+- 适用于对实时性有要求，有逻辑处理的应用场景
+- 以请求响应的方式实现节点间通信
 
 # ROS 调试常用工具
 
