@@ -35,3 +35,12 @@
 </launch>
 ```
 
+# launch文件中嵌套launch启动
+
+- 使用include 即可  file后为launch文件路径
+- $(find 软件包名) = 软件包路径
+
+```xml
+<include file="$(find wpr_simulation)/launch/wpb_stage_slam.launch"/>
+```
+
