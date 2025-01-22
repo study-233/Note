@@ -68,10 +68,3 @@
 
 
 
-# TF变换
-
-## tf层级结构查看
-
-rosrun rqt_tf_tree rqt_tf_tree 
-
-# 
