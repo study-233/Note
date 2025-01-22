@@ -71,17 +71,23 @@ ColorRGBA，Duration，Time，Header，MultiArrayDimension，MultiArrayLayout
 
 # 自定义消息包
 
-## 创建消息包
+## 自定义msg
 
-**依赖项需要 message_generation message_runtime**
+### 创建消息包
 
-catkin_create_pkg qq_msgs roscpp rospy std_msgs message_generation message_runtime
+1. **依赖项需要 message_generation message_runtime**
+
+​	catkin_create_pkg qq_msgs roscpp rospy std_msgs message_generation message_runtime
+
+2. 创建msg文件夹存放msg文件
 
 #### 消息包格式
 
 数据类型 变量名
 
-### CMakeLists 修改添加
+### 修改配置文件
+
+#### CMakeLists 修改添加
 
 ```camke
 add_message_files(
@@ -102,7 +108,7 @@ catkin_package(
 )
 ```
 
-### package 补全
+#### package 补全
 
 ```xml
   <buildtool_depend>catkin</buildtool_depend>
@@ -127,7 +133,7 @@ catkin_package(
   <exec_depend>std_msgs</exec_depend>
 ```
 
-## 消息包应用
+## 自定义消息包应用
 
 ### C++节点
 

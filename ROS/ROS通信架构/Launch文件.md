@@ -5,9 +5,25 @@
   - ROS_WARN不受该属性控制
 - 在launch文件中 为节点添加 launch-prefix="gnome-terminal -e" 可以让节点单独运行在一个独立终端中
 
+## 格式
 
+```xml
+<launch>    <!--根标签-->
+    <node>    <!--需要启动的node及其参数-->
+    <include>    <!--包含其他launch-->
+    <machine>    <!--指定运行的机器-->
+    <env-loader>    <!--设置环境变量-->
+    <param>    <!--定义参数到参数服务器-->
+    <rosparam>    <!--启动yaml文件参数到参数服务器-->
+    <arg>    <!--定义变量-->
+    <remap>    <!--设定参数映射-->
+    <group>    <!--设定命名空间-->
+</launch>    <!--根标签-->
+```
 
-- c++文件
+## 示例
+
+### 启动c++文件节点
 
 ```xml
 <launch>
@@ -21,7 +37,7 @@
 </launch>
 ```
 
-- py文件(type需要加上后缀)
+### 启动py文件节点(type需要加上后缀)
 
 ```xml
 <launch>

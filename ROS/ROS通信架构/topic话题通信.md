@@ -14,6 +14,8 @@
 2. 创建发布对象pub
 3. 开启while循环 使用pub对象发布消息包
 
+### C++
+
 ```cpp
 #include <ros/ros.h>
 #include <std_msgs/String.h>
@@ -38,6 +40,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
+
+### Python
 
 ```python
 #!/usr/bin/env python3
@@ -72,6 +76,8 @@ if __name__ == "__main__":
 4. 定义回调函数，处理消息包
 5. main函数中需要执行 ros::spinOnce()   让回调函数能够响应接收到的消息包
 
+### C++
+
 ```cpp
 #include <ros/ros.h>
 #include <std_msgs/String.h>
@@ -95,6 +101,8 @@ int main(int argc, char *argv[])
 }
 ```
 
+### Python
+
 ```python
 #!/usr/bin/env python3
 #coding=utf-8
@@ -110,21 +118,19 @@ if __name__ == "__main__":
 
     sub = rospy.Subscriber("Topic1",String,chao_callback,queue_size=10)
 
-    rospy.spin(
+    rospy.spin()
 ```
-
-# 服务通信
-
-- 适用于对实时性有要求，有逻辑处理的应用场景
-- 以请求响应的方式实现节点间通信
 
 # ROS 调试常用工具
 
-- rostopic list    	
-  - 当前所有活跃的话题
-- rostopic echo 主题名称		
-  - 消息包内容
-- rostopic hz 主题名称		
-  - 消息包发送频率
-- **rqt_graph**                       
-  - **图形化话题工具**			
+|            命令             |           作用           |
+| :-------------------------: | :----------------------: |
+|        rostopic list        |   列出当前所有的topic    |
+|  rostopic info topic_name   | 显示某个topic的属性信息  |
+|  rostopic echo topic_name   |   显示某个topic的内容    |
+| rostopic pub topic_name ... |   向某个topic发布内容    |
+|   rostopic bw topic_name    |   查看某个topic的带宽    |
+|   rostopic hz topic_name    |   查看某个topic的频率    |
+|  rostopic find topic_type   |   查找某个类型的topic    |
+|  rostopic type topic_name   | 查看某个topic的类型(msg) |
+|          rqt_graph          |      图形化话题工具      |
