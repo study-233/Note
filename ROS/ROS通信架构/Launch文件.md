@@ -51,6 +51,12 @@
 </launch>
 ```
 
+### 参数设置
+
+```xml
+<node pkg="rviz" type="rviz" name="rviz" args="-d $(find slam_pkg)/rviz/slam.rviz"/>
+```
+
 # launch文件中嵌套launch启动
 
 - 使用include 即可  file后为launch文件路径
