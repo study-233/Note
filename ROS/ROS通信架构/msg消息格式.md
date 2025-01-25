@@ -69,6 +69,12 @@ ColorRGBA，Duration，Time，Header，MultiArrayDimension，MultiArrayLayout
 
 ## 几何消息包 geometry_msgs
 
+## 可视化消息包 visualization_msgs
+
+#### 标志物 visualization_msgs::Marker
+
+http://wiki.ros.org/rviz/DisplayTypes/Marker
+
 # 自定义消息包
 
 ## 自定义msg
