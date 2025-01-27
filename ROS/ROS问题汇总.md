@@ -144,3 +144,32 @@ while(ros::ok()){
 ```
 
 ## 11. TOPIC发布端不要忘记 ros::spin()
+
+## 12. darknet_ros 编译问题
+
+```
+nvcc fatal   : Unsupported gpu architecture 'compute_30'
+```
+
+原因：这是不支持compute_30的gpu构架，这是由于GPU太新，与CUDA版本不兼容导致
+找到[makefile](https://so.csdn.net/so/search?q=makefile&spm=1001.2101.3001.7020)下图处，根据自己CUDA的版本注释不同的行
+
+```cmake
+# Find CUDA
+find_package(CUDA QUIET)
+if (CUDA_FOUND)
+  find_package(CUDA REQUIRED)
+  message(STATUS "CUDA Version: ${CUDA_VERSION_STRINGS}")
+  message(STATUS "CUDA Libararies: ${CUDA_LIBRARIES}")
+  set(
+    CUDA_NVCC_FLAGS
+    ${CUDA_NVCC_FLAGS};
+    -O3
+    # -gencode arch=compute_30,code=sm_30
+    # -gencode arch=compute_35,code=sm_35
+    -gencode arch=compute_50,code=[sm_50,compute_50]
+    -gencode arch=compute_52,code=[sm_52,compute_52]
+    -gencode arch=compute_61,code=sm_61
+    -gencode arch=compute_62,code=sm_62
+  )
+```
