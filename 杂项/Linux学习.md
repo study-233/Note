@@ -15,3 +15,19 @@ cd ~  	--> 	/home/andy
 cd /    --> 	/
 ```
 
+# png --> jpg
+
+保留源文件
+
+```
+for file in *.png; do convert "$file" "${file%.png}.jpg"; done
+```
+
+不保留
+
+```
+for file in *.png; do
+    convert "$file" "${file%.png}.jpg" && rm "$file"
+done
+```
+
