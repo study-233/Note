@@ -31,3 +31,8 @@ for file in *.png; do
 done
 ```
 
+# 统计文件个数
+
+tree
+
+ls | wc -l
